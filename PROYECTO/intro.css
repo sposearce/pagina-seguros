@@ -1,0 +1,28 @@
+. pais{
+display: grid;
+grid-template-columns: auto auto auto;
+align-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+font-size: xx-large;
+
+}
+
+h3 {width:100%; display:table; 
+    /* background-color:#0b1785;  */
+    margin-bottom:25px; 
+    color: black; font-weight: 800; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 
+    Geneva, Verdana, sans-serif; text-align: center;}
+
+
+.logo {
+    width: 100%
+    display: table;
+    text-align: center;
+}
+
+.pais {
+    width: 100%
+    display: table;
+    text-align: center;
+}
+

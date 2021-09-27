@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(241, 239, 239, 0.945);
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 50px;
+    }
+
+.titulo{
+    text-align: center;
+}
+.logo {
+display: grid;
+grid-template-columns: auto 70%;
+padding-bottom: 7px;
+}
+
+
+#bandera {
+        
+    margin: auto;
+    
+   
+}
+
+.titulo{
+
+display: grid;
+grid-template-columns:  auto;
+align-content: center;
+   
+}
+
+.LocDate {
+
+text-align-last: right;
+padding-right: 200px;
+}
+
+}
+.asegurado{
+    padding-top: 15px;
+    padding-top: 15px;
+
+}
+.riesgo{
+    padding-top: 15px;
+    padding-top: 15px;
+
+}
+.vigencia{
+    padding-top: 15px;
+    padding-top: 15px;
+
+}
+.prima{
+    padding-top: 15px;
+    padding-top: 15px;
+
+}
+
+
+.vigenciatest{
+     align-self: center;
+    justify-content: center;
+    padding-block-end: 20px;
+    padding-left: 10px;
+    padding-right: 15px;
+}
+
+
+footer {
+    display: grid;
+        background-color:#0b1785;
+        grid-template-columns: auto ; */
+        
+        column-gap:50px;
+        row-gap:50px;
+        color:whitesmoke;
+        padding-left: 15%;
+       
+        margin-right: 16%;
+    }

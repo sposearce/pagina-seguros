@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Documentacion</title>
+    <link rel="stylesheet" href="./generador.css">
+    <link rel="icon" href="./imagen/LOGO (2).ico">
+   
+</head>
+<body>
+
+    <div class="printBoton"> <!-- boton impresion lo puse para que pueda imprimir la cotizacion-->
+
+        <button onclick="imprimir()"> Imprimir Cotizacion</button>
+    
+    <script>
+    function imprimir() {
+        window.print();
+    }
+    </script>
+    
+    </div>
+    
+    <div class="logo">
+        <img src="./imagen/LOGO.png" alt="spabrokers" width="93%">
+        <img id="bandera" src="./imagen/uruflag.png" alt="uruguay" width="25%">
+    </div>
+
+<br>
+<br>
+
+    <SPAN class="titulo"> <h1>MODELO DE COTIZACION</h1> </SPAN>
+        
+
+    <br>
+    <br>
+<div class="LocDate">
+<h2>
+    <script>
+                        let today = new Date();
+                        let dd = today.getDate();
+                        let mm = today.getMonth() + 1; 
+                        let yyyy = today.getFullYear();
+    
+             if (dd < 10) {
+                dd = '0' + dd;
+                  }
+    
+               if (mm < 10) {
+                mm = '0' + mm;
+                  }
+    
+              today = dd + '/' + mm + '/' + yyyy;
+            
+              document.write("Montevideo,  "); document.write(today);
+    
+    </script>      
+    </div>
+</h2>
+</div>
+<br>
+
+<h3 class="vigenciatest">
+
+
+<script>
+
+    // Verificacion de inicio de vigencia, solo se pueden emitir cotizacione con inicio de vigencia de hasta un año de antiguedad.
+   
+    let anho = prompt("Año Inicio Vigencia");
+    const anhoactual = yyyy;
+    
+    // = prompt("Año Actual");
+
+    // console.log(anho) para pruebas;
+    // console.log(anhoactual);
+    // console.log(pcompliance);
+    
+    
+    
+let pcompliance = anho - anhoactual ;
+if (pcompliance === 0) {
+    document.write(`Cotizacion OK. Año de inicio de vigencia y año emision en mismo periodo.`)
+}else if (pcompliance < 1){
+       document.write(`Cotizacion NO VALIDA. Ud este intentando hacer una cotizacion retroactiva.`)
+}else{
+       document.write(`Cotizacion SUJETA A CONFIRMACION. Ud esta intentando hacer una cotizacion que se emitira en futuros periodos. Esta Cotizacion puede sufrir cambios y debera ser recotizada en el periodo que inicie.`)
+}
+
+</script>
+<br>
+<div id="textiniv">
+    <script>
+    document.write(`Año Inicio Vigencia ingresado por el usuario: `); 
+    document.write(anho);
+    
+    </script>
+    
+</div>
+
+<div class="textanact">
+    <script>
+   
+    document.write(`Año actual: `); document.write(anhoactual)   ;    
+    </script>
+    
+</div>
+</h3>
+
+<div>
+
+
+    <div class="idagentecom">
+
+
+        <input type="number" id="text-input" />
+        <button id="add-button">PRIMA EXPRESADA EN USD</button>
+        <button id="reset-button">ELIMINAR </button>
+        <main class = "container" id="page-main"></main>
+    
+        
+    <script>
+    
+        let main = document.getElementById("page-main");
+        let input = document.getElementById("text-input");
+        let addButton = document.getElementById("add-button");
+        let resetButton = document.getElementById("reset-button");
+    
+    
+        const agregarElemento = function () {
+    
+            if(input.value === "") return
+            
+            const nuevoElemento = document.createElement("p");
+            nuevoElemento.textContent = input.value;
+    
+            input.value = "";
+    
+            main.appendChild(nuevoElemento);
+        }
+    
+        const quitarElemento = ()=> {
+            main.textContent = "";
+        }
+    
+    
+    
+        addButton.addEventListener("click", agregarElemento)
+        resetButton.addEventListener("click", quitarElemento)
+    
+    
+        
+    </script>
+    
+<br>
+
+<!-- ............................... -->
+<h3>DESCRIPCION DEL RIESGO</h3>
+
+<script>
+    function limita(elEvento, maximoCaracteres) {
+        let elemento = document.getElementById("texto");
+
+        if(elemento.value.length >= maximoCaracteres) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+
+
+
+
+    const actualizaInfo = (maximoCaracteres) => {
+        let elemento = document.getElementById("texto");
+        let info = document.getElementById("info");
+
+        if(elemento.value.length >= maximoCaracteres) {
+            info.textContent = "Máximo 100 caracteres";
+        } else {
+            const difMax = maximoCaracteres - elemento.value.length
+            info.textContent = `Puede seguir escribiendo ${difMax} caracteres`
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+</script>
+<body>
+    <div id="info">Máximo 300 caracteres</div>
+    <textarea id="texto" onkeypress="return limita(event, 300);" onkeyup="actualizaInfo(300)" rows="30" cols="150"></textarea>
+</body>
+
+<div>
+
+</div>
+<br>
+<h3>CONDICIONES DE LA COBERTURA COTIZADA</h3>
+
+<script>
+    function limita1(elEvento1, maximoCaracteres1) {
+        let elemento1 = document.getElementById("texto1");
+
+        if(elemento1.value.length >= maximoCaracteres1) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+
+
+
+
+    let actualizaInfo1 = (maximoCaracteres1) => {
+        let elemento1 = document.getElementById("texto1");
+        let info = document.getElementById("info1");
+
+        if(elemento1.value.length >= maximoCaracteres1) {
+            info.textContent = "Máximo 100 caracteres";
+        } else {
+            const difMax = maximoCaracteres1 - elemento1.value.length
+            info.textContent = `Puede seguir escribiendo ${difMax} caracteres`
+        }
+    }
+
+</script>
+
+
+
+
+<div>
+    <div id="info1">Máximo 300 caracteres</div>
+    <textarea id="texto1" onkeypress="return limita(event, 300);" onkeyup="actualizaInfo1(300)" rows="30" cols="150"></textarea>
+</div>
+
+<br>
+
+
+
+
+<footer>
+
+    <div class="address-box">
+
+        <H3>SPA BROKERS DE REASEGUROS</H3>
+        <h3>Sede Central</h3>
+
+             <div class="address-contact">
+                <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-map-marker fa-stack-1x fa-inverse"></i></span>
+
+                <div class="address-content"> 18 de Diciembre 123 piso 21.  Montevideo, Uruguay. </div>
+            </div>
+                        
+            <div class="address-contact">
+                <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-phone fa-stack-1x fa-inverse"></i></span>
+                <div class="address-content">(+54) 11 5217-6100 | 0800 –345–RISK (7475)</div>
+            </div>
+        
+             <div class="address-contact">
+                <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i></span>
+                <div class="address-content"><a href="mailto:info@spabrokers.com">info@spabrokers.com</a></div>
+            </div>
+        
+                                </div>
+
+</footer>
+

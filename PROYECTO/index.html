@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Bienvenido Usuario</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./imagen/LOGO (2).ico">
+</head>
+
+<header>
+    <div id="date">
+        <script>
+            let today = new Date();
+            let dd = today.getDate();
+            let mm = today.getMonth() + 1; 
+            let yyyy = today.getFullYear();
+            
+            if (dd < 10) {
+              dd = '0' + dd;
+            }
+            
+            if (mm < 10) {
+              mm = '0' + mm;
+            }
+            
+            today = dd + '/' + mm + '/' + yyyy;
+            document.write("Montevideo,  "); document.write(today);
+            
+        </script>      
+       
+    </div>
+
+    <section>   
+        
+        
+        <nav>
+        <ul>
+       
+        <li><a href="#aaa1">Ingreso operador</a></li>
+        <li><a href="#aaa2">SPA Brokers</a></li>
+        <li><a href="#aaa3">Servicios</a></li>
+        <li><a href="#aaa4">Riesgos</a></li>
+        <li><a href="#aaa5">Noticias</a></li>
+        <li><a href="#aaa5">Contacto</a></li>
+        </ul>
+        </nav>
+    </section>
+</header>
+
+
+
+
+
+
+<body>
+
+    <div class="imagenlogo">
+        <img src="./imagen/LOGO.png" alt="logo" height="75%">
+
+    </div>
+
+    <div class="imagen">
+        <img src="https://www.enaya.com/skin/48/frontend/enaya/default/images/corporate.png" alt="insutance" height="95%" >
+    
+    </div>
+  
+
+   <div>
+
+
+   </div>
+    
+    
+    
+    <section id="aaa1" class="content">
+    <a href="./login.html"><h2>Ingreso operador</h2></a>
+    <p>Ingreso de operaciones, Base de datos, ND / NC </p>
+    </section>
+    
+    <section id="aaa2" class="content">
+    <h2>SPA Brokers</h2>
+    <p>Somos un broker de seguros y reaseguros, enfocados en las necesidades de un mercado diverso, obteniendo los mejores costos y coberturas del mercado.</p>
+    </section>
+    
+    <section id="aaa3" class="content">
+    <h2>Servicios</h2>
+    <p>Colocaciones de riesgos complejos, diversificacione de riesgo en mercadors</p>
+    </section>
+    
+    <section id="aaa4" class="content">
+    <h2>Riesgos</h2>
+    <p>Nos especializacon en los siguientes riesgos</p>
+    <ul>
+        <li>Property</li>
+        <li>Energy</li>
+        <li>RC</li>
+        <li>TR / Incendio</li>
+        <li>Fine Arts</li>
+        <li>Otros</li>
+    </ul>
+    </section>
+    
+    <section id="aaa5" class="content">
+    <h2>Noticias</h2>
+    <p> En esta seccion encontrara noticias sobre el mercado asegurador, asi como articulos y noticias de interes.</p>
+            <ul>
+            <li><a href="https://www.bbc.com/mundo/noticias-38973945">Historia del Seguro</a></li>
+            <li><a href="https://www.lavanguardia.com/seguros/20210102/6161632/5-riesgos-seguro-ve-2021.html">Riesgos del Seguro en el 2021</a></li>
+            <li><a href="https://www.willistowerswatson.com/es-AR/Solutions/credit-political-risk-and-terrorism">Soluciones nuevos Riesgos</a></li>
+        </ul>
+            </section>
+    
+    
+
+
+   
+
+</body>
+
+<footer>
+    <DIV>
+        
+    <h3>SPA BROKERS DE REASEGUROS</h3>
+</DIV>
+    
+    <p><label class="aaa5"> Consultas<br>
+        <span class="wpcf7-form-control-wrap your-message">
+        <textarea name="your-message" cols="40" rows="10" 
+        class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea>
+        </span> 
+        </label><br>
+    <label> Correo electrónico<br>
+        <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false"></span> </label><br>
+    <input type="submit" value="Enviar" class="wpcf7-form-control wpcf7-submit"><span class="ajax-loader"></span></p>
+    
+    
+        
+        <div class="address-box">
+
+            <h3>Sede Central</h3>
+
+                 <div class="address-contact">
+                    <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-map-marker fa-stack-1x fa-inverse"></i></span>
+
+                    <div class="address-content"> 18 de Diciembre 123 piso 21.  Montevideo, Uruguay. </div>
+                </div>
+                            
+                <div class="address-contact">
+                    <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-phone fa-stack-1x fa-inverse"></i></span>
+                    <div class="address-content">(+54) 11 5217-6100 | 0800 –345–RISK (7475)</div>
+                </div>
+            
+                 <div class="address-contact">
+                    <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i></span>
+                    <div class="address-content"><a href="mailto:info@spabrokers.com">info@spabrokers.com</a></div>
+                </div>
+            
+                                    </div>
+
+</footer>

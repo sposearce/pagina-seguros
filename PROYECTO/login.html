@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login de Usuario SPA</title>
+    <link rel="icon" href="./imagen/LOGO (2).ico">
+</head>
+<body>
+    <img class="logospa" src="./imagen/LOGO.png" alt="logo">
+    
+    
+</style>
+     
+</head>  
+<body>  
+    <center> <h1> Ingreso al sistema de Cotizaciones </h1> </center> 
+    <form>
+        <div class="container"> 
+            <label>Username : </label> 
+            <input type="text" placeholder="Nombre de usuario" name="username" required>
+            <label>Password : </label> 
+            <input type="password" placeholder="Ingrese Password" name="password" required>
+            <a href="./generador.html">Ingrese aqui hasta que le otorguen credenciales * Servidor en prueba*</a>
+            <button type="submit">Login</button> 
+            
+            <!-- <input type="checkbox" checked="checked"> Remember me  -->
+            <button type="button" class="cancelbtn"> Cancel</button> 
+           <a href="#"> Pulse aqui  para recuperar sus credenciales de ingreso </a> 
+        </div> 
+    </form>   
+</body>   
+
+
+
+<style> 
+
+    
+    Body {
+      font-family: Calibri, Helvetica, sans-serif;
+      align-content: center;
+      /* background-color: whitesmoke; */
+    }
+    button { 
+           background-color: #4CAF50; 
+           width: 25%;
+            color: white; 
+            padding: 15px; 
+            margin: 10px 0px; 
+            border: none; 
+            cursor: pointer; 
+            border-radius: 25px
+             } 
+
+       .cancelbtn { 
+           width: auto; 
+           padding: 15px;
+           margin: 10px 5px;
+           border-radius: 25px
+        } 
+  
+        form { 
+            border: 3px solid #f1f1f1; 
+        } 
+     input[type=text], input[type=password] { 
+            width: 50%; 
+            margin: 8px 0;
+            padding: 12px 20px; 
+            display: grid; 
+            border: 2px solid blue; 
+            border-radius: 25px
+        }
+     button:hover { 
+            opacity: 0.7; 
+        } 
+      
+          
+       
+     .container { 
+        display: grid;
+        grid-template-columns: auto;
+        justify-items: center;} 
+
+        img { 
+        display: block; 
+        margin: auto; }
+     
+
+    </style>
+
+
+
+
+
+</body>
+</html>
